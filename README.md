@@ -1,1 +1,1 @@
-# stock-markert-tracker
+# stock-market-tracker
