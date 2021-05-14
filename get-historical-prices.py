@@ -1,7 +1,7 @@
 import yfinance as yf
 import pandas as pd
 
-ticker_list = ['^DJI','^GSPC','^IXIC','AAPL','AMZN','GOOG','MSFT','VOO','VTI','QQQM','QQQ','VXUS','NVDA','AMD','PLTR','INTC','DIS','CVX','TSLA','SQ','BA','GE','IBM','NKE','SBUX','FB','NFLX']
+ticker_list = ['^DJI','^GSPC','^IXIC','AAPL','AMZN','GOOG','MSFT','VOO','VTI','QQQM','QQQ','VXUS','NVDA','AMD','PLTR','INTC','DIS','CVX','TSLA','SQ','BA','GE','IBM','NKE','SBUX','FB','NFLX','ETH-USD','BTC-USD']
 
 #initialize combined data frame to solve Power BI error
 combined_data = pd.DataFrame()
@@ -31,12 +31,12 @@ for ticker in ticker_list:
     if 'sharesOutstanding' in stock.info:
         stock_hist_data['Current Outstanding Shares'] = stock.info['sharesOutstanding']
     else:
-        stock_hist_data['Current Outstanding Shares'] = ''
+        stock_hist_data['Current Outstanding Shares'] = 0
 
     if 'marketCap' in stock.info:
         stock_hist_data['Current Market Cap'] = stock.info['marketCap']
     else:
-        stock_hist_data['Current Market Cap'] = ''
+        stock_hist_data['Current Market Cap'] = 0
 
 
 
