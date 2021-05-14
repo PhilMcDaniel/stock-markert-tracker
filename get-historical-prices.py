@@ -29,14 +29,14 @@ for ticker in ticker_list:
         stock_hist_data['Sector'] = ''
   
     if 'sharesOutstanding' in stock.info:
-        stock_hist_data['Outstanding Shares'] = stock.info['sharesOutstanding']
+        stock_hist_data['Current Outstanding Shares'] = stock.info['sharesOutstanding']
     else:
-        stock_hist_data['Outstanding Shares'] = ''
+        stock_hist_data['Current Outstanding Shares'] = ''
 
     if 'marketCap' in stock.info:
-        stock_hist_data['Market Cap'] = stock.info['marketCap']
+        stock_hist_data['Current Market Cap'] = stock.info['marketCap']
     else:
-        stock_hist_data['Market Cap'] = ''
+        stock_hist_data['Current Market Cap'] = ''
 
 
 
